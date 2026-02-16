@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Outcome__c</fullName>
+    <description>Defines the result of the follow-up process when the lead is not immediately sales-ready.</description>
+    <inlineHelpText>Use this field only when the Lead Status is Follow Up. 
+Select Success if the follow-up leads to conversion, or No Success if the lead moves to nurturing.</inlineHelpText>
+    <label>Follow Up Outcome</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending</fullName>
+                <default>true</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Success</fullName>
+                <default>false</default>
+                <label>Success</label>
+            </value>
+            <value>
+                <fullName>No Success</fullName>
+                <default>false</default>
+                <label>No Success</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
