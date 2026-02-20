@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Minimum_Data_For_Conversion</fullName>
+    <active>true</active>
+    <description>Prevents Lead conversion unless the Lead requires sales-assisted handling and meets minimum qualification criteria:
+Working status, Interested = Yes, Email populated, and Lead Source populated.</description>
+    <errorConditionFormula>AND(
+  IsConverted,
+  OR(
+    NOT(Sales_Assisted__c),
+    NOT(ISPICKVAL(Interested__c, &quot;Yes&quot;)),
+    ISBLANK(Email),
+    ISBLANK(TEXT(LeadSource))
+  )
+)</errorConditionFormula>
+    <errorMessage>Lead cannot be converted.
+
+To convert a Lead:
+• Sales Assisted must be checked
+• Status must be &quot;Working&quot;
+• Interested must be &quot;Yes&quot;
+• Email must be populated
+• Lead Source must be populated</errorMessage>
+</ValidationRule>
