@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Queue responsible for managing newly created Leads (Status = New) within the B2C Marketing intake process.
+
+All incoming Leads enter this queue before qualification. 
+Marketing is responsible for reviewing and updating the Lead status within the defined SLA (48 hours).
+
+This queue prevents premature assignment to Sales and ensures controlled escalation only for Sales-Assisted scenarios.</description>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Marketing Queue</name>
+    <queueMembers>
+        <users>
+            <user>noemiselfin.9ae98195efd6@agentforce.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>
