@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Queue for Leads escalated to Sales (Sales_Assisted = true).
+Used after Marketing qualification before conversion.</description>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Sales Queue</name>
+    <queueMembers>
+        <users>
+            <user>noemiselfin.9ae98195efd6@agentforce.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>
